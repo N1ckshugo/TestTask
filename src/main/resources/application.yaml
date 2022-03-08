@@ -1,0 +1,29 @@
+server:
+  port: 3939
+
+springdoc:
+  api-docs:
+    path: "api-docs"
+
+spring:
+  liquibase:
+    enabled: true
+
+  datasource:
+    url: jdbc:h2:file./testTask
+    username: root
+    password: 1234
+    driver-class-name: org.h2.Driver
+
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher

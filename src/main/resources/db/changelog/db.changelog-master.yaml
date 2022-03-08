@@ -1,0 +1,15 @@
+databaseChangeLog: #параметр в котором находятся миграции
+  - include:
+      file: db/changelog/changeset/create_tables.sql # путь к файлу миграции
+  - include:
+      file: db/changelog/changeset/insert_orders.sql
+  - include:
+      file: db/changelog/changeset/insert_roles.sql
+  - include:
+      file: db/changelog/changeset/insert_users.sql
+  - include:
+      file: db/changelog/changeset/insert_users_roles.sql
+
+
+
+
