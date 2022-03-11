@@ -1,6 +1,5 @@
 package com.example.testtask.model;
 
-import com.example.testtask.rest.OrderRestController;
 import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
 
 @Entity(name = "orders")
 @Getter
@@ -33,7 +33,7 @@ public class Order {
     private Long phone;
 
     @Column
-    @NotNull
+    @Email
     private String email;
 
     @Column

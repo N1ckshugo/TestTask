@@ -24,7 +24,7 @@ CREATE TABLE ORDERS
     primary key (id)
 );
 
-create table USERS_ROLES
+CREATE TABLE USERS_ROLES
 (
     users_id bigint,
     roles_id bigint,
@@ -32,8 +32,8 @@ create table USERS_ROLES
 );
 
 alter table if exists USERS_ROLES
-    add constraint FKML90KEF4W2JY7OXYQV742TSFC foreign key (roles_id) references ROLES;
+    add constraint FKRoles foreign key (roles_id) references ROLES;
 
 alter table if exists USERS_ROLES
-    add constraint FKA62J07K5MHGIFPP955H37PONJ foreign key (users_id) references USERS;
+    add constraint FKUsers foreign key (users_id) references USERS;
 
